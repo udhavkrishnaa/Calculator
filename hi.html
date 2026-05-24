@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        body {
+            background-color: white;
+            color: #84B179;
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            background-color: #C7EABB;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        button {
+            color: #84B179;
+            width: 64px;
+            height: 48px;
+            font-size: 28px;
+            margin: 4px;
+            border-radius: 30%;
+            border: 0px;
+            background-color: #C7EABB;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .nu {
+            color: #84B179;
+        }
+
+        #equal {
+            background-color: #C7EABB;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+
+    <h2 id="display"></h2>
+
+    <div>
+        <button class="nu" onclick="ClearDisplay()" id="clear">AC</button>
+        <button class="nu" onclick="Delete()" id="delete">⌫</button>
+        <button>⠀</button>
+        <button class="nu" onclick="UpdateDisplay('/')" id="divide">/</button>
+        <br/>
+
+        <button onclick="UpdateDisplay(7)" id="seven">7</button>
+        <button onclick="UpdateDisplay(8)" id="eight">8</button>
+        <button onclick="UpdateDisplay(9)" id="nine">9</button>
+        <button class="nu" onclick="UpdateDisplay('*')" id="multiply">*</button>
+        <br/>
+
+        <button onclick="UpdateDisplay(4)" id="four">4</button>
+        <button onclick="UpdateDisplay(5)" id="five">5</button>
+        <button onclick="UpdateDisplay(6)" id="six">6</button>
+        <button class="nu" onclick="UpdateDisplay('-')" id="subtract">-</button>
+        <br/>
+
+        <button onclick="UpdateDisplay(1)" id="one">1</button>
+        <button onclick="UpdateDisplay(2)" id="two">2</button>
+        <button onclick="UpdateDisplay(3)" id="three">3</button>
+        <button class="nu" onclick="UpdateDisplay('+')" id="add">+</button>
+        <br/>
+
+        <button>⠀</button>
+        <button onclick="UpdateDisplay(0)" id="zero">0</button>
+        <button onclick="UpdateDisplay('.')" id="dot">.</button>
+        <button onclick="Equal()" id="equal">=</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
